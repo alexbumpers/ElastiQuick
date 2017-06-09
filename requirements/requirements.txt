@@ -1,0 +1,4 @@
+# Current Django version
+pip install django
+
+# Custom requirements go here
