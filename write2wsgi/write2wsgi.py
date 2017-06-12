@@ -4,4 +4,4 @@ beanstalk_wsgi = """option_settings:
 def write2wsgi(wsgi_file):
     with open(wsgi_file, 'a') as wsgi_config:
         aws_wsgi = wsgi_config.write(beanstalk_wsgi)
-write2wsgi('wsgi_test.py')
+write2wsgi('.ebextensions/django.config')

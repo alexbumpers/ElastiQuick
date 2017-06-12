@@ -1,23 +1,33 @@
 #!/bin/bash
-# Simple script for quickly instantiating and deploying an AWS Elastic
-# Beanstalk instance with Python 3 and Django
+# Simple --DUMMY -- script for quickly instantiating and deploying an AWS Elastic
+# Beanstalk instance with Python 3 and Django. You can run this script without
+# changing anything if you'd like to create a quick dummy/test AWSEB instance.
+# Not recommended for real development.
 # ------------------------------------------
 # ------------------------------------------
+# Begin at home directory
+# cd ~
 # Instantiate a virtual environment with Python 3
-virtualenv -p python3.4 ~/eb-virt
+virtualenv -p python3.4 test_venv
 # Replace <environment-name> with preferred tag
-source ~/eb-virt/bin/activate
+source test_venv/bin/activate
 # Installs most up-to-date Django version
 pip install django
 pip freeze
 # Instantiate Django project. Replace <project-name> with preferred tag
 django-admin startproject dummy
+sleep 10
 # Navigate to primary Django project directory
-cd dummy
+source ./dummy
+sleep 10
 # Write installed packages to requirements.txt
 pip freeze > requirements.txt
 # Create .ebextensions for WSGI config later
 mkdir .ebextensions
+# C
+touch .ebextensions/django.config
+# Write WSGI configuration to /.ebextensions/django.config/
+python3 write2wsgi.py
 # Deactivate virtual environment
 deactivate
 # Initialize AWS Elastic Beanstalk app with Python 3.4
