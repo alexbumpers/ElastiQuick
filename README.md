@@ -2,11 +2,11 @@
 Quickly deploy a Python3 + Django project to an AWS Elastic Beanstalk instance.
 
 ## About
-ElasticQuick serves as an easy, quick, and efficient way to quickly create and
-deploy an Elastic Beanstalk site through Amazon Web services. Although Elastic
+ElastiQuick serves as an easy, quick, and efficient way to quickly create and
+deploy an Elastic Beanstalk site through Amazon Web Services. Although Elastic
 Beanstalk probably isn't sufficient for larger projects with heavy scaling needs,
-it is a great way to get a basic site up and running. This repository allows
-you to deploy an Elastic Beanstalk site by simply running `ElastiQuick_dummy.sh`
+it is a great way to get a basic website up and running. This repository allows
+you to deploy an Elastic Beanstalk site by simply running `ElastiQuick.sh`
 in your shell.
 
 This should work on any standard Linux/Mac OS installation, but
@@ -29,5 +29,5 @@ on an AWS Elastic Beanstalk instance.
 
 ## Help
 Questions about running the script, setting up WSGI configuration, or anything
-else? Open up an issue, or contact me on Github and we'll work together to
+else? Open up an issue/PR, or contact me on Github and we'll work together to
 resolve the issue.
